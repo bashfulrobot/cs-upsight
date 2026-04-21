@@ -566,6 +566,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#model-orgs-are-inherited-from-the-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model: orgs are inherited from the team
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#assigning-a-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       Assigning a mapping
@@ -864,13 +873,14 @@
 <li>Two or more teams: the chart renders.</li>
 </ul>
 <h2 id="linking-contacts-to-teams-and-konnect-orgs">Linking contacts to teams and Konnect orgs<a class="headerlink" href="#linking-contacts-to-teams-and-konnect-orgs" title="Permanent link">&para;</a></h2>
-<p>On the <strong>People</strong> page, contact cards now surface any Konnect org and team they're linked to as chips. Clicking the Konnect chip opens the org in Konnect admin; the team chip is informational.</p>
+<p>On the <strong>People</strong> page, contact cards surface the contact's team and every Konnect org that team is mapped into, as chips. Clicking a Konnect chip opens the org in Konnect admin; the team chip is informational.</p>
+<h3 id="model-orgs-are-inherited-from-the-team">Model: orgs are inherited from the team<a class="headerlink" href="#model-orgs-are-inherited-from-the-team" title="Permanent link">&para;</a></h3>
+<p>A contact belongs to <strong>one team</strong>. That team is mapped into <strong>zero or more Konnect orgs</strong> via the Stack page's per-org "Mapped Teams" editor. A contact's Konnect-org membership is the union of their team's mapped orgs — there's no separate per-contact org assignment. Move a team into a new org and every contact on that team inherits it automatically.</p>
 <h3 id="assigning-a-mapping">Assigning a mapping<a class="headerlink" href="#assigning-a-mapping" title="Permanent link">&para;</a></h3>
 <p>Click the pencil icon on a contact card. The inline editor shows:</p>
 <ul>
 <li><strong>Title</strong> — the contact's role / title. For Salesforce-linked contacts, the label reads "Title (syncs to Salesforce)" and saving pushes the change to the contact's <code>Title</code> field on Salesforce via the normal write-back queue. For local-only contacts (no <code>salesforce_id</code>), the title is stored locally only.</li>
-<li><strong>Konnect Org</strong> dropdown — any Konnect org on the account, or "No Konnect org".</li>
-<li><strong>Team</strong> dropdown — filtered to teams <strong>mapped into the selected org</strong> when one is chosen; shows all account teams when no org is selected. If you switch the org to one where the current team isn't mapped, the team selection clears automatically.</li>
+<li><strong>Team</strong> dropdown — any team on the account, or "No team". Changing the team re-computes the inherited Konnect-org chips on Save.</li>
 </ul>
 <h3 id="add-time-mapping">Add-time mapping<a class="headerlink" href="#add-time-mapping" title="Permanent link">&para;</a></h3>
 <p>The manual <strong>Add Contact</strong> form has the same two dropdowns as optional fields. Contacts imported from Salesforce are created with no mapping — edit them afterwards to set one.</p>
