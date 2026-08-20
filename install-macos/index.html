@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://upsight.bashfulrobot.com/backup-restore/">
+        <link rel="canonical" href="https://upsight.bashfulrobot.com/install-macos/">
       
       
-        <link rel="prev" href="../dashboards/">
+        <link rel="prev" href="../getting-started/">
       
       
-        <link rel="next" href="../multi-machine-sync/">
+        <link rel="next" href="../install-nixos/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Backup and restore - Upsight</title>
+        <title>macOS - Upsight</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#backup-and-restore" class="md-skip">
+        <a href="#install-on-macos" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backup and restore
+              macOS
             
           </span>
         </div>
@@ -296,8 +296,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -307,11 +309,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -326,7 +328,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Install
@@ -337,10 +339,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../install-macos/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    macOS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -350,6 +373,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download and install
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download and install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-past-gatekeeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting past Gatekeeper
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-app-expects-at-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      What the app expects at runtime
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What the app expects at runtime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-and-config-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database and config locations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credential storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salesforce-write-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salesforce write-back
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -493,31 +611,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Backup and restore
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../backup-restore/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,80 +624,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-backups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Automatic backups
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manual-backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manual backup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backup-file-location" class="md-nav__link">
-    <span class="md-ellipsis">
-      Backup file location
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restoring-from-a-backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restoring from a backup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compacting-the-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compacting the database
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-and-export" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import and export
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -666,59 +689,124 @@
   
 
 
-<h1 id="backup-and-restore">Backup and restore<a class="headerlink" href="#backup-and-restore" title="Permanent link">&para;</a></h1>
-<p>Upsight maintains automatic rolling backups of your database. Each backup is a
-single archive containing the SQLite database and your account files (documents,
-win wires, logos).</p>
-<h2 id="automatic-backups">Automatic backups<a class="headerlink" href="#automatic-backups" title="Permanent link">&para;</a></h2>
-<p>By default the app takes a backup every 24 hours and keeps:</p>
-<ul>
-<li>7 daily snapshots</li>
-<li>4 weekly snapshots</li>
-</ul>
-<p>When the retention limits are reached, older snapshots are removed automatically.</p>
-<p>You can adjust the schedule and retention in Settings under Data, "Automatic
-backups." Changes take effect on the next app launch.</p>
-<p>To see when the last backup ran, go to Settings, then About. The Diagnostics panel
-shows the backup directory path and the timestamp of the last backup.</p>
-<h2 id="manual-backup">Manual backup<a class="headerlink" href="#manual-backup" title="Permanent link">&para;</a></h2>
-<p>To take a backup immediately, go to Settings, then Data, and click "Back up now."
-Or go to Settings, About, Diagnostics, and click "Back up now." The app reports
-the filename when the backup completes.</p>
-<h2 id="backup-file-location">Backup file location<a class="headerlink" href="#backup-file-location" title="Permanent link">&para;</a></h2>
-<p>Upsight stores backups in a subdirectory of its data directory. The exact path
-is shown in Settings under About, Diagnostics, Backups.</p>
-<h2 id="restoring-from-a-backup">Restoring from a backup<a class="headerlink" href="#restoring-from-a-backup" title="Permanent link">&para;</a></h2>
-<p>To restore, close the app and replace the database file with the backup copy.</p>
-<p>The database file path is shown in Settings under About, Diagnostics, Database.
-It is also printed in Settings under Data, Database, "Path."</p>
-<p>Steps to restore:</p>
+<h1 id="install-on-macos">Install on macOS<a class="headerlink" href="#install-on-macos" title="Permanent link">&para;</a></h1>
+<p>Upsight publishes a macOS <code>.dmg</code> on every
+<a href="https://github.com/bashfulrobot/cs-upsight/releases/latest">GitHub release</a>. This is
+the path for anyone who is not building the app from source with Nix. See
+<a href="../install-nixos/">Install on NixOS</a> if you are on NixOS instead.</p>
+<h2 id="download-and-install">Download and install<a class="headerlink" href="#download-and-install" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Close Upsight.</li>
-<li>Find the backup file you want to restore from (in the backups directory shown
-   in Settings).</li>
-<li>Copy the backup file over the current database file, overwriting it.</li>
-<li>Reopen Upsight.</li>
+<li>Download <code>Upsight.dmg</code> from the
+   <a href="https://github.com/bashfulrobot/cs-upsight/releases/latest">latest release</a>.</li>
+<li>Open it and drag <strong>Upsight</strong> into <strong>Applications</strong>.</li>
+<li>Launch it from Launchpad or Spotlight.</li>
 </ol>
-<p>Backup filenames include a timestamp so you can identify which snapshot to use.</p>
-<p>If you have Syncthing running, pause the sync before restoring so Syncthing does
-not conflict with the file operation. Resume sync after the app starts and confirms
-the database opens cleanly.</p>
-<h2 id="compacting-the-database">Compacting the database<a class="headerlink" href="#compacting-the-database" title="Permanent link">&para;</a></h2>
-<p>The "Compact (VACUUM)" button in Settings under Data runs SQLite's VACUUM command
-on the database. This rewrites the file to recover space from deleted rows and
-fragmentation. It is safe to run anytime, but it takes a few seconds for large
-databases. It also requires exclusive access, so the app must be the only
-process with the file open.</p>
-<h2 id="import-and-export">Import and export<a class="headerlink" href="#import-and-export" title="Permanent link">&para;</a></h2>
-<p>You can move account data between Upsight instances using the import and export
-tools in Settings under Data, "Import / Export."</p>
-<p>Exporting produces a ZIP bundle with the selected accounts' full dataset,
-including contacts, opportunities, interactions, win wires, cases, tasks,
-meeting history, and attachments.</p>
-<p>Importing reads a bundle and merges it into the current database. If the bundle
-contains accounts that already exist (matched by Salesforce ID), the import asks
-whether to skip those accounts or update them.</p>
+<h3 id="getting-past-gatekeeper">Getting past Gatekeeper<a class="headerlink" href="#getting-past-gatekeeper" title="Permanent link">&para;</a></h3>
+<p>The build is <strong>unsigned</strong>. There is no Apple Developer ID certificate behind
+it, so macOS Gatekeeper blocks a plain double-click on first launch with an
+"Upsight can't be opened because Apple cannot check it for malicious software"
+(or "is damaged and can't be opened") message. Two ways past it, once:</p>
+<ul>
+<li><strong>Right-click (or Control-click) <code>Upsight.app</code> in Applications and choose
+  Open.</strong> Confirm in the dialog that appears. This is the standard macOS path
+  for unsigned software and only needs doing once per machine.</li>
+<li><strong>Or, from a terminal:</strong>
+  <div class="highlight"><pre><span></span><code>xattr -cr /Applications/Upsight.app
+</code></pre></div>
+  This clears the quarantine attribute Gatekeeper checks. Use it if the
+  right-click path does not offer an Open option.</li>
+</ul>
+<h2 id="runtime-dependencies">Runtime dependencies<a class="headerlink" href="#runtime-dependencies" title="Permanent link">&para;</a></h2>
+<p>The app itself needs nothing beyond the <code>.dmg</code>. A handful of features shell out
+to external CLIs and need those on <code>PATH</code> separately. Install only what you use,
+the app runs fine without the rest, and a feature missing its CLI just no-ops
+(<code>upsight doctor</code>, see below, tells you exactly what is missing).</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Dependency</th>
+<th>Install</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Win-wire PDF text extraction</td>
+<td><code>pdftotext</code> (poppler)</td>
+<td><code>brew install poppler</code></td>
+</tr>
+<tr>
+<td>AI features (meeting summaries, CX indicators, agenda enhancement, "Investigate" on a failed write-back)</td>
+<td>the <code>claude</code> CLI</td>
+<td><code>curl -fsSL https://claude.ai/install.sh \| bash</code>, then <code>claude login</code></td>
+</tr>
+<tr>
+<td>Salesforce integration (account/case sync, optional write-back)</td>
+<td>the <code>sf</code> CLI</td>
+<td><code>npm install -g @salesforce/cli</code>, then <code>sf org login web</code></td>
+</tr>
+<tr>
+<td>Tableau dashboards surfaced to AI generation (optional, only if configured in Settings)</td>
+<td><code>npx</code> running <code>@tableau/mcp-server</code></td>
+<td><code>brew install node</code> (gives you <code>npx</code>), then <code>npm install -g @tableau/mcp-server@2.21.1</code> to seed the cache</td>
+</tr>
+</tbody>
+</table>
+<p>A few notes on those:</p>
+<ul>
+<li><strong>Clipboard copy</strong> and <strong>desktop notifications</strong> need nothing. macOS's
+  built-in <code>pbcopy</code>/<code>pbpaste</code> and <code>osascript</code> are used automatically.</li>
+<li><strong>The Salesforce CLI is deliberately installed via <code>npm</code>, not Homebrew.</strong>
+  Homebrew's <code>salesforce-cli</code> cask is deprecated upstream and fails the
+  Gatekeeper check; <code>npm</code> is Salesforce's own documented install path (and the
+  one <code>sf update</code> expects). If you don't already have Node, get it first:
+  <code>brew install node</code>.</li>
+<li><strong>The AI binary is configurable.</strong> <code>claude</code> is the default, but any CLI that
+  reads a prompt on stdin and writes to stdout works. See
+  <a href="../settings/">Settings</a> and the <code>[ai]</code> section of <code>config.toml</code> (<code>binary</code> /
+  <code>args</code>) to point at a different one (for example the Gemini CLI).</li>
+<li><strong>Tableau MCP is seeded, not just installed.</strong> The app invokes it as
+  <code>npx -y --prefer-offline @tableau/mcp-server@2.21.1</code> at AI-generation time.
+  <code>--prefer-offline</code> means it resolves from npm's local cache rather than
+  hitting the network on every AI call, so the one-time global install above
+  is what makes that fast and avoids a network round-trip, rather than
+  strictly required. <code>npx</code> would still fetch it fresh each time without it.</li>
+<li>After installing what you need, run <code>upsight doctor</code> from a terminal (or the
+  Doctor panel in Settings) to confirm everything the app can see is wired up
+  correctly, including an optional <code>--ai</code> check that runs one real generation
+  through your configured AI binary.</li>
+</ul>
+<h2 id="what-the-app-expects-at-runtime">What the app expects at runtime<a class="headerlink" href="#what-the-app-expects-at-runtime" title="Permanent link">&para;</a></h2>
+<h3 id="database-and-config-locations">Database and config locations<a class="headerlink" href="#database-and-config-locations" title="Permanent link">&para;</a></h3>
+<p>Upsight stores its data in a single SQLite file. The database path is the same
+on every platform:</p>
+<div class="highlight"><pre><span></span><code>~/.local/share/upsight/upsight.db
+</code></pre></div>
+<p><code>config.toml</code>, however, follows the macOS convention rather than Linux's:</p>
+<div class="highlight"><pre><span></span><code>~/Library/Application Support/upsight/config.toml
+</code></pre></div>
+<p>Set the <code>UPSIGHT_DB</code> environment variable before launching to point the app at
+a different database file, useful if you keep it on a synced volume:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">UPSIGHT_DB</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/sync/upsight/upsight.db"</span>
+</code></pre></div>
+<p>Upsight is a local, single-user app. To use it on more than one machine, keep
+the database file in a directory that <a href="https://syncthing.net/">Syncthing</a>
+replicates (<code>brew install syncthing</code> if you want it, or grab the cask). The app
+opens the database in WAL mode with a single writer, so only run one instance
+at a time against a given file; Syncthing also replicates the <code>-wal</code> and <code>-shm</code>
+sidecar files, so let a sync settle before opening the app on another machine.
+See <a href="../multi-machine-sync/">Multi-machine sync</a>.</p>
+<h3 id="credential-storage">Credential storage<a class="headerlink" href="#credential-storage" title="Permanent link">&para;</a></h3>
+<p>Integration credentials (Salesforce, Aha, Clari, Todoist, and similar) are
+stored in the macOS Keychain, not in <code>config.toml</code>. The first time you save one
+in Settings, macOS may prompt you to allow Upsight to access the keychain.
+Approve it, or the app can't read the credential back on the next launch.</p>
+<h3 id="salesforce-write-back">Salesforce write-back<a class="headerlink" href="#salesforce-write-back" title="Permanent link">&para;</a></h3>
+<p>Editing posture and other fields always saves locally and queues the change.
+Pushing those changes back to Salesforce is off by default, because it writes
+to your live org. Turn it on in Settings under Integrations, Salesforce, "Push
+field edits back to Salesforce", then relaunch the app. With it off, your edits
+are kept and queued but nothing is sent to Salesforce.</p>
 
 
 

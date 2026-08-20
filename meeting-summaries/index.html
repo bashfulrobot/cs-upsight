@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://upsight.bashfulrobot.com/backup-restore/">
+        <link rel="canonical" href="https://upsight.bashfulrobot.com/meeting-summaries/">
       
       
-        <link rel="prev" href="../dashboards/">
+        <link rel="prev" href="../salesforce/">
       
       
-        <link rel="next" href="../multi-machine-sync/">
+        <link rel="next" href="../monthly-cx-update/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Backup and restore - Upsight</title>
+        <title>Meeting summaries - Upsight</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#backup-and-restore" class="md-skip">
+        <a href="#meeting-summaries" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backup and restore
+              Meeting summaries
             
           </span>
         </div>
@@ -430,10 +430,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../meeting-summaries/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Meeting summaries
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -443,6 +464,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-summaries-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How summaries work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-upsight-summarize-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      The upsight summarize CLI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The upsight summarize CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#folder-to-account-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folder-to-account mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-a-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing a summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marking-meetings-as-processed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marking meetings as processed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging activity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -493,31 +594,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Backup and restore
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../backup-restore/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,80 +607,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-backups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Automatic backups
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manual-backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manual backup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backup-file-location" class="md-nav__link">
-    <span class="md-ellipsis">
-      Backup file location
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restoring-from-a-backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restoring from a backup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compacting-the-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compacting the database
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-and-export" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import and export
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -666,59 +672,46 @@
   
 
 
-<h1 id="backup-and-restore">Backup and restore<a class="headerlink" href="#backup-and-restore" title="Permanent link">&para;</a></h1>
-<p>Upsight maintains automatic rolling backups of your database. Each backup is a
-single archive containing the SQLite database and your account files (documents,
-win wires, logos).</p>
-<h2 id="automatic-backups">Automatic backups<a class="headerlink" href="#automatic-backups" title="Permanent link">&para;</a></h2>
-<p>By default the app takes a backup every 24 hours and keeps:</p>
-<ul>
-<li>7 daily snapshots</li>
-<li>4 weekly snapshots</li>
-</ul>
-<p>When the retention limits are reached, older snapshots are removed automatically.</p>
-<p>You can adjust the schedule and retention in Settings under Data, "Automatic
-backups." Changes take effect on the next app launch.</p>
-<p>To see when the last backup ran, go to Settings, then About. The Diagnostics panel
-shows the backup directory path and the timestamp of the last backup.</p>
-<h2 id="manual-backup">Manual backup<a class="headerlink" href="#manual-backup" title="Permanent link">&para;</a></h2>
-<p>To take a backup immediately, go to Settings, then Data, and click "Back up now."
-Or go to Settings, About, Diagnostics, and click "Back up now." The app reports
-the filename when the backup completes.</p>
-<h2 id="backup-file-location">Backup file location<a class="headerlink" href="#backup-file-location" title="Permanent link">&para;</a></h2>
-<p>Upsight stores backups in a subdirectory of its data directory. The exact path
-is shown in Settings under About, Diagnostics, Backups.</p>
-<h2 id="restoring-from-a-backup">Restoring from a backup<a class="headerlink" href="#restoring-from-a-backup" title="Permanent link">&para;</a></h2>
-<p>To restore, close the app and replace the database file with the backup copy.</p>
-<p>The database file path is shown in Settings under About, Diagnostics, Database.
-It is also printed in Settings under Data, Database, "Path."</p>
-<p>Steps to restore:</p>
-<ol>
-<li>Close Upsight.</li>
-<li>Find the backup file you want to restore from (in the backups directory shown
-   in Settings).</li>
-<li>Copy the backup file over the current database file, overwriting it.</li>
-<li>Reopen Upsight.</li>
-</ol>
-<p>Backup filenames include a timestamp so you can identify which snapshot to use.</p>
-<p>If you have Syncthing running, pause the sync before restoring so Syncthing does
-not conflict with the file operation. Resume sync after the app starts and confirms
-the database opens cleanly.</p>
-<h2 id="compacting-the-database">Compacting the database<a class="headerlink" href="#compacting-the-database" title="Permanent link">&para;</a></h2>
-<p>The "Compact (VACUUM)" button in Settings under Data runs SQLite's VACUUM command
-on the database. This rewrites the file to recover space from deleted rows and
-fragmentation. It is safe to run anytime, but it takes a few seconds for large
-databases. It also requires exclusive access, so the app must be the only
-process with the file open.</p>
-<h2 id="import-and-export">Import and export<a class="headerlink" href="#import-and-export" title="Permanent link">&para;</a></h2>
-<p>You can move account data between Upsight instances using the import and export
-tools in Settings under Data, "Import / Export."</p>
-<p>Exporting produces a ZIP bundle with the selected accounts' full dataset,
-including contacts, opportunities, interactions, win wires, cases, tasks,
-meeting history, and attachments.</p>
-<p>Importing reads a bundle and merges it into the current database. If the bundle
-contains accounts that already exist (matched by Salesforce ID), the import asks
-whether to skip those accounts or update them.</p>
+<h1 id="meeting-summaries">Meeting summaries<a class="headerlink" href="#meeting-summaries" title="Permanent link">&para;</a></h1>
+<p>The Meetings tab inside an account lists past and upcoming meetings. For past
+meetings, Upsight can generate an AI summary from the transcript or notes.</p>
+<h2 id="how-summaries-work">How summaries work<a class="headerlink" href="#how-summaries-work" title="Permanent link">&para;</a></h2>
+<p>The app passes meeting content to the <code>claude</code> CLI and receives a structured
+summary with key topics, decisions, and action items. The CLI must be on your
+<code>PATH</code> and authenticated for this to work.</p>
+<p>A generated summary appears in the meeting detail panel on the right side of
+the Meetings screen. If none has been generated yet, the panel shows the raw
+notes.</p>
+<p>Copy a summary in two formats, full Markdown or Slack Markdown, using the
+format buttons in the meeting detail.</p>
+<h2 id="the-upsight-summarize-cli">The <code>upsight summarize</code> CLI<a class="headerlink" href="#the-upsight-summarize-cli" title="Permanent link">&para;</a></h2>
+<p>Upsight ships a companion CLI subcommand for batch-generating meeting summaries
+from transcripts stored on your filesystem.</p>
+<div class="highlight"><pre><span></span><code>upsight<span class="w"> </span>summarize
+</code></pre></div>
+<p>The CLI looks for transcript files in a configured folder structure and matches
+each folder to an Upsight account by name. It then generates and stores the
+summary inside Upsight.</p>
+<h3 id="folder-to-account-mapping">Folder-to-account mapping<a class="headerlink" href="#folder-to-account-mapping" title="Permanent link">&para;</a></h3>
+<p>The CLI matches folder names to account names automatically when the names are
+the same (or close enough after normalization). When a folder name is an
+abbreviation or would match more than one account, you must add an explicit
+mapping.</p>
+<p>Add mappings in Settings under General, "Meeting summaries." Each row maps a
+folder name (as the CLI sees it on disk) to a specific Upsight account. Folders
+that already match by name need no entry here.</p>
+<p>The folder name match is case-insensitive.</p>
+<h2 id="editing-a-summary">Editing a summary<a class="headerlink" href="#editing-a-summary" title="Permanent link">&para;</a></h2>
+<p>If a generated summary is wrong or incomplete, you can edit it directly. Open the
+meeting in the Meetings tab, scroll to the summary, and click the edit icon. Your
+edits save locally and replace the generated content.</p>
+<h2 id="marking-meetings-as-processed">Marking meetings as processed<a class="headerlink" href="#marking-meetings-as-processed" title="Permanent link">&para;</a></h2>
+<p>Once you review a meeting and act on its action items, you can mark it as
+processed using the toggle in the meeting detail panel. Processed meetings stay
+in the list but look different from pending ones.</p>
+<h2 id="logging-activity">Logging activity<a class="headerlink" href="#logging-activity" title="Permanent link">&para;</a></h2>
+<p>From the meeting detail you can log a CX activity tied to the meeting. This creates
+an activity record linked to the meeting date and the relevant contact.</p>
 
 
 
