@@ -634,6 +634,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#looking-up-accounts-from-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looking up accounts from the CLI
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -869,6 +878,30 @@ mapping.</p>
 folder name (as the CLI sees it on disk) to a specific Upsight account. Folders
 that already match by name need no entry here.</p>
 <p>The folder name match is case-insensitive.</p>
+<h3 id="looking-up-accounts-from-the-cli">Looking up accounts from the CLI<a class="headerlink" href="#looking-up-accounts-from-the-cli" title="Permanent link">&para;</a></h3>
+<p><code>upsight accounts list</code> and <code>upsight accounts find</code> use the same account
+resolution the folder-to-account matching relies on, so they are the fastest
+way to check why a folder isn't matching, or to get an account's exact name or
+id before adding a manual mapping.</p>
+<div class="highlight"><pre><span></span><code>upsight<span class="w"> </span>accounts<span class="w"> </span>list
+</code></pre></div>
+<p>Prints every account as a two-column <code>ID  NAME</code> table. Add <code>--filter
+&lt;substring&gt;</code> to narrow it by a case-insensitive substring of the name, or
+<code>--json</code> to get <code>{"accounts":[{"id":...,"name":...,"slug":...}]}</code> instead of
+the table.</p>
+<div class="highlight"><pre><span></span><code>upsight<span class="w"> </span>accounts<span class="w"> </span>find<span class="w"> </span>&lt;query&gt;
+</code></pre></div>
+<p>Resolves <code>&lt;query&gt;</code> to a single account and prints its id and name. <code>&lt;query&gt;</code>
+can be a numeric id, an exact account name, an account's slug, or a substring
+of the name. If nothing matches, or more than one account matches the
+substring, the command exits with an error and, where possible, a "did you
+mean" list of the closest names, run <code>upsight accounts list</code> from there to see
+everything. Add <code>--id-only</code> to print just the id, useful when piping into
+another command, or <code>--json</code> for a machine-readable result.</p>
+<p>The folder name matches summarize relies on go through this same resolution
+order (slug, then id, then exact name, then substring), so if <code>upsight
+accounts find "&lt;your folder name&gt;"</code> resolves cleanly, <code>upsight summarize</code> will
+match that folder to the same account.</p>
 <h2 id="editing-a-summary">Editing a summary<a class="headerlink" href="#editing-a-summary" title="Permanent link">&para;</a></h2>
 <p>If a generated summary is wrong or incomplete, you can edit it directly. Open the
 meeting in the Meetings tab, scroll to the summary, and click the edit icon. Your

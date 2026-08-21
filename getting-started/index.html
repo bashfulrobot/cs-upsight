@@ -344,6 +344,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notifications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#keyboard-shortcuts" class="md-nav__link">
     <span class="md-ellipsis">
       Keyboard shortcuts
@@ -356,6 +365,15 @@
   <a href="#density-and-theme" class="md-nav__link">
     <span class="md-ellipsis">
       Density and theme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-your-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking your setup
     </span>
   </a>
   
@@ -831,12 +849,17 @@ meeting notes, win wires, and external dashboards in one place, all local and
 offline-capable, synced to Salesforce on demand.</p>
 <h2 id="first-launch">First launch<a class="headerlink" href="#first-launch" title="Permanent link">&para;</a></h2>
 <p>The very first time you open the app, it asks for a license key before showing
-anything else. This is a one-time step — once the key is accepted you won't be
-asked again on that machine, and if you use Upsight on more than one Mac or
-Linux box with the same synced config, activating on one covers the rest (see
-<a href="../multi-machine-sync/">Multi-machine sync</a>).</p>
+anything else. In practice you only see this screen once. Once a key is accepted,
+Upsight stores it in <code>config.toml</code> and re-checks it on every launch, so if it
+still validates you're never asked again. If you use Upsight on more than one
+Mac or Linux box with the same synced config, activating on one covers the rest
+(see <a href="../multi-machine-sync/">Multi-machine sync</a>).</p>
 <p>If you don't have a key yet, ask whoever administers Upsight for your team to
 issue you one, then paste it into the activation screen and click <strong>Activate</strong>.</p>
+<p>If the gate reappears on a later launch, your stored key stopped validating,
+most often because it expired or <code>config.toml</code> got corrupted by a bad sync.
+Ask your administrator for a new key and activate again; nothing else about
+your data is affected.</p>
 <p>Once past activation, the app opens to the accounts list (Home). On first launch this list is empty.
 Accounts are pulled from Salesforce the first time you authenticate and run a sync.</p>
 <p>Before syncing, you need:</p>
@@ -857,6 +880,22 @@ Health, People, Action Items, Meetings, Agendas, CX Events, Opportunities,
 Win Wires, Stack, Usage, Q&amp;A, Documents, and Resources.</p>
 <p>Click a different account in the Home list to switch. The account-scoped section
 updates to reflect the new selection.</p>
+<p>A small tools row sits below the main navigation with Sync Log, Events, a
+theme toggle, Help, and Settings. Help opens an in-app topic browser, separate
+from this documentation site, useful for a quick reference without leaving
+the app.</p>
+<h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
+<p>The bell icon shows a count of unread alerts: Salesforce sync results, new Aha!
+comments, an idea shipping, backup results, and similar background events.
+Click it to open the panel, grouped by source with the newest first.</p>
+<p>Click a notification to jump straight to what it's about, an Aha! idea, an
+account's Health screen, the relevant Settings section, and so on. That also
+marks it read. Not every notification is clickable; ones without an obvious
+destination (like a config-level sync failure) just show the alert. Dismiss
+one notification, a whole source group, or everything at once with <strong>Clear
+all</strong>.</p>
+<p>See <a href="../settings/">Settings</a> for the toggle that turns desktop notifications
+on or off.</p>
 <h2 id="keyboard-shortcuts">Keyboard shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -895,6 +934,16 @@ updates to reflect the new selection.</p>
 <h2 id="density-and-theme">Density and theme<a class="headerlink" href="#density-and-theme" title="Permanent link">&para;</a></h2>
 <p>You can switch between light and dark themes (or follow your system setting) and
 between comfortable and compact row density in Settings under General.</p>
+<h2 id="checking-your-setup">Checking your setup<a class="headerlink" href="#checking-your-setup" title="Permanent link">&para;</a></h2>
+<p>Run <code>upsight doctor</code> from a terminal to confirm your integrations are wired
+up correctly: Salesforce auth, Clari, the Google Calendar ICS feed, and the
+win-wire toolchain (<code>pdftotext</code> plus an AI CLI). Each line reports <strong>OK</strong>
+(configured and working), <strong>SKIP</strong> (not configured, not a problem), or
+<strong>FAIL</strong> (configured but not working, the only state that fails the command).</p>
+<p>Add <code>--ai</code> to also run a real AI generation through your configured binary.
+It's opt-in because it spends a model call and can take up to 90 seconds, but
+it's the only check that catches an AI CLI too old for Upsight's flags, an
+expired login, or a bad <code>[ai] skills</code> path.</p>
 <h2 id="where-data-lives">Where data lives<a class="headerlink" href="#where-data-lives" title="Permanent link">&para;</a></h2>
 <p>Everything is stored in a single SQLite file on your machine. The installed
 app (Nix-packaged on Linux, or the <a href="../install-macos/">macOS <code>.dmg</code> release</a>)

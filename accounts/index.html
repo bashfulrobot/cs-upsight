@@ -445,6 +445,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="The accounts list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-and-the-portfolio-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering and the portfolio metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-actions-from-the-account-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick actions from the account card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -813,9 +846,36 @@ Accounts are the primary unit of work. Most of the app's screens live inside an
 account context.</p>
 <h2 id="the-accounts-list">The accounts list<a class="headerlink" href="#the-accounts-list" title="Permanent link">&para;</a></h2>
 <p>The Home screen shows every account you have synced from Salesforce. Click any
-row to open that account. The search bar at the top filters by name.</p>
-<p>Each row shows the account name and a summary of health indicators from the
-most recent Salesforce sync.</p>
+card or row to open that account. Toggle between a card grid and a table with
+the two icons at the right of the filter row.</p>
+<h3 id="filtering-and-the-portfolio-metrics">Filtering and the portfolio metrics<a class="headerlink" href="#filtering-and-the-portfolio-metrics" title="Permanent link">&para;</a></h3>
+<p>The five tiles at the top (Accounts, Green, Yellow, Red, ARR) are more than
+stats, click Green, Yellow, or Red to filter the list to accounts at that
+health status, click it again to clear the filter. Click Accounts to clear a
+health filter without touching your other filters.</p>
+<p>Below the tiles, the renewals strip shows the current fiscal quarter plus the
+next three. Click a quarter to filter the list to accounts renewing in that
+quarter.</p>
+<p>Use the search box to filter by name, and the segment dropdown to filter by
+account segment. Combine any of these with the health and renewal filters,
+active filters show as pills above the list, click <strong>Clear</strong> to reset all of
+them at once.</p>
+<h3 id="creating-an-account">Creating an account<a class="headerlink" href="#creating-an-account" title="Permanent link">&para;</a></h3>
+<p>Click <strong>New</strong> at the top of the screen, then <strong>New Account</strong>. The dialog
+searches Salesforce by name first, since Salesforce is the source of truth,
+pick a result from the list to import it. If Salesforce has nothing to import
+(or is not configured), fill in the manual-entry form below the search box:
+name is required, industry, segment, and account exec are optional. Either
+path creates the account and adds it to your list immediately.</p>
+<h3 id="quick-actions-from-the-account-card">Quick actions from the account card<a class="headerlink" href="#quick-actions-from-the-account-card" title="Permanent link">&para;</a></h3>
+<p>Each card (and the account header, once you are inside an account) has a
+kebab menu with shortcuts that skip straight to a common action without
+opening the account first: Log CX Event, Create Meeting Agenda, Create
+Meeting Summary, CX Update, Add Contact, Add Win Wire, and Add to Stack.</p>
+<p>The gear icon on a card opens Account Preferences, editable account-level
+settings plus a Danger Zone with <strong>Delete Account</strong>, which permanently
+removes the account and all of its local data. Export anything you need
+first (see <a href="../backup-restore/">Backup and restore</a>); there is no undo.</p>
 <h2 id="sections-within-an-account">Sections within an account<a class="headerlink" href="#sections-within-an-account" title="Permanent link">&para;</a></h2>
 <p>Once you open an account, the sidebar expands with these tabs:</p>
 <ul>
@@ -835,8 +895,9 @@ most recent Salesforce sync.</p>
   (see <a href="../health-and-cx-events/">Health and CX Events</a>).</li>
 <li><strong>Opportunities</strong> lists open and recently closed Salesforce opportunities
   (see <a href="../account-reference/#opportunities">Account reference</a>).</li>
-<li><strong>Win Wires</strong> holds win wire documents. New entries are pulled from Salesforce
-  and PDFs can be attached and AI-extracted (see <a href="../win-wires/">Win Wires</a>).</li>
+<li><strong>Win Wires</strong> holds win wire documents, generated from a PDF with AI or entered
+  by hand, and refreshable against a linked Salesforce Opportunity
+  (see <a href="../win-wires/">Win Wires</a>).</li>
 <li><strong>Stack</strong> shows the customer's technical stack: Konnect orgs, installed products
   and plugins, and infrastructure details. You maintain these manually
   (see <a href="../account-reference/#stack">Account reference</a>).</li>
