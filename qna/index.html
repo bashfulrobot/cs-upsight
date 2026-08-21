@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://upsight.bashfulrobot.com/salesforce/">
+        <link rel="canonical" href="https://upsight.bashfulrobot.com/qna/">
       
       
-        <link rel="prev" href="../qna/">
+        <link rel="prev" href="../agendas/">
       
       
-        <link rel="next" href="../cases/">
+        <link rel="next" href="../salesforce/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Salesforce integration - Upsight</title>
+        <title>Q&A - Upsight</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#salesforce-integration" class="md-skip">
+        <a href="#qa" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Salesforce integration
+              Q&A
             
           </span>
         </div>
@@ -493,27 +493,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../qna/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Q&A
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -530,7 +509,7 @@
           
   
   <span class="md-ellipsis">
-    Salesforce integration
+    Q&A
     
   </span>
   
@@ -542,7 +521,7 @@
         
   
   <span class="md-ellipsis">
-    Salesforce integration
+    Q&A
     
   </span>
   
@@ -565,71 +544,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
+  <a href="#asking-a-question" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication
+      Asking a question
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syncing-data-from-salesforce" class="md-nav__link">
+  <a href="#what-the-answer-is-grounded-in" class="md-nav__link">
     <span class="md-ellipsis">
-      Syncing data from Salesforce
+      What the answer is grounded in
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#salesforce-write-back-off-by-default" class="md-nav__link">
+  <a href="#question-history" class="md-nav__link">
     <span class="md-ellipsis">
-      Salesforce write-back (off by default)
+      Question history
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-sf-cli-path" class="md-nav__link">
+  <a href="#saving-an-answer" class="md-nav__link">
     <span class="md-ellipsis">
-      The sf CLI path
+      Saving an answer
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cases
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jira-and-slack-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Jira and Slack links
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#escalation-and-staleness-indicators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escalation and staleness indicators
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -637,6 +583,27 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../salesforce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Salesforce integration
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -849,66 +816,35 @@
   
 
 
-<h1 id="salesforce-integration">Salesforce integration<a class="headerlink" href="#salesforce-integration" title="Permanent link">&para;</a></h1>
-<p>Upsight reads from and writes to Salesforce through your locally installed <code>sf</code>
-CLI. The app never handles your Salesforce credentials directly.</p>
-<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>Log in once with the Salesforce CLI:</p>
-<div class="highlight"><pre><span></span><code>sf<span class="w"> </span>org<span class="w"> </span>login<span class="w"> </span>web
-</code></pre></div>
-<p>This opens a browser, authenticates against Kong's production Salesforce org, and
-stores the session in the CLI's own credential store. Upsight picks it up on the
-next sync.</p>
-<p>To check whether the app sees an authenticated session, go to Settings, then
-Integrations, then Salesforce. The status indicator shows your authenticated
-username or "Not authenticated."</p>
-<p>You can also start the login flow from Settings, which shows the command and
-the auth-status indicator.</p>
-<h2 id="syncing-data-from-salesforce">Syncing data from Salesforce<a class="headerlink" href="#syncing-data-from-salesforce" title="Permanent link">&para;</a></h2>
-<p>Upsight pulls Salesforce data on demand. Open an account and click the sync button
-in the account header (the rotating-arrows icon above the tab strip) to pull the
-latest data.</p>
-<p>Reads are read-only SELECT queries against the live Kong production org.</p>
-<h2 id="salesforce-write-back-off-by-default">Salesforce write-back (off by default)<a class="headerlink" href="#salesforce-write-back-off-by-default" title="Permanent link">&para;</a></h2>
-<p>Write-back is the path that pushes your local edits (posture fields, health
-indicators, notes) back to Salesforce. It is off by default, because turning it
-on writes to the live Kong org.</p>
-<p>With write-back off:</p>
-<ul>
-<li>Edits still save locally and appear in the UI immediately.</li>
-<li>Changes queue in the local database.</li>
-<li>Nothing leaves your machine.</li>
-</ul>
-<p>To enable write-back: go to Settings, Integrations, Salesforce, and turn on
-"Push field edits back to Salesforce", then relaunch the app.</p>
-<p>Once enabled, a field edit pushes after a short debounce. A background drain
-retries any failures automatically.</p>
-<p>Before enabling, check the Sync Log to review any queued edits from earlier
-sessions. Open it by clicking "Sync Log" at the bottom of the left sidebar. Those
-queued edits push on the first launch after you enable write-back.</p>
-<h2 id="the-sf-cli-path">The <code>sf</code> CLI path<a class="headerlink" href="#the-sf-cli-path" title="Permanent link">&para;</a></h2>
-<p>By default the app finds the <code>sf</code> CLI on your <code>PATH</code>. If you need to point it at
-a specific binary, set a custom path under Settings, Integrations, Salesforce.
-Toggle "Auto" off and enter the absolute path to the binary.</p>
-<h2 id="cases">Cases<a class="headerlink" href="#cases" title="Permanent link">&para;</a></h2>
-<p>Cases are pulled from Salesforce and displayed read-only. There is no case
-write-back; case management stays in Salesforce.</p>
-<h3 id="jira-and-slack-links">Jira and Slack links<a class="headerlink" href="#jira-and-slack-links" title="Permanent link">&para;</a></h3>
-<p>If a case has a linked Jira ticket or Slack thread in Salesforce, a matching
-button appears on the case and opens that URL in your default browser. Hover
-over the button first to see which host it points to.</p>
-<h3 id="escalation-and-staleness-indicators">Escalation and staleness indicators<a class="headerlink" href="#escalation-and-staleness-indicators" title="Permanent link">&para;</a></h3>
-<p>Two indicators surface on the Cases list and case detail pane, both computed
-locally from data already synced (nothing new to configure):</p>
-<ul>
-<li><strong>Escalated</strong> (red activity icon): the case's Status is one of "Escalated to
-  Eng," "Escalated to Services," or "Internal Escalation," or the case has a
-  Jira ticket linked. Closed and solved cases never show this, even if they were
-  escalated at some point, since the escalation is no longer active.</li>
-<li><strong>Stale</strong> (amber clock icon): the case is open and its most recent comment (or
-  its creation date, if it has never had a comment) is more than a week old.
-  Closed and solved cases never show this either.</li>
-</ul>
+<h1 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h1>
+<p>The Q&amp;A tab inside an account lets you ask a free-form question and get an
+AI-generated answer grounded in that account's data.</p>
+<h2 id="asking-a-question">Asking a question<a class="headerlink" href="#asking-a-question" title="Permanent link">&para;</a></h2>
+<p>Type your question into the box at the top of the Q&amp;A tab and click Ask. A
+confirmation dialog warns that the answer can take 30 seconds to several
+minutes to generate, since the AI reads the account's full context first. You
+can navigate away while it runs and the answer will be there when you come
+back.</p>
+<p>The empty state shows how many channels and interactions exist for the
+account, as a rough sense of how much grounding is available before you ask.</p>
+<h2 id="what-the-answer-is-grounded-in">What the answer is grounded in<a class="headerlink" href="#what-the-answer-is-grounded-in" title="Permanent link">&para;</a></h2>
+<p>Each question is answered fresh. Upsight builds a context block from the
+account's profile, win-wire history, account-state summary, recent meeting
+summaries, active cases, opportunities, contacts, consumption posture, ranked
+Aha ideas, and REACH scores, then sends that block plus your question to the
+AI in one prompt. There is no conversation memory. Every question is
+answered from scratch, not as a follow-up to the previous one.</p>
+<p>Answers cite their sources inline, as backticked filenames or REACH values,
+so you can trace a claim back to where it came from.</p>
+<h2 id="question-history">Question history<a class="headerlink" href="#question-history" title="Permanent link">&para;</a></h2>
+<p>The list on the Q&amp;A tab shows your questions and answers for the current app
+session, most recent first, capped at the last 10. This history is not saved
+between sessions and clears when you switch accounts. To keep an answer
+permanently, save it as a document (below).</p>
+<h2 id="saving-an-answer">Saving an answer<a class="headerlink" href="#saving-an-answer" title="Permanent link">&para;</a></h2>
+<p>Click "Save as document" under any answered question to store it as a
+Markdown file in the account's Documents tab. The file is named with a
+timestamp and includes the question and the full answer.</p>
 
 
 

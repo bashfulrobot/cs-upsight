@@ -16,7 +16,7 @@
         <link rel="prev" href="../meeting-summaries/">
       
       
-        <link rel="next" href="../dashboards/">
+        <link rel="next" href="../action-items/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -412,11 +412,137 @@
   
   
     <li class="md-nav__item">
+      <a href="../account-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../health-and-cx-events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Health and CX Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win-wires/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Win Wires
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agendas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Q&A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../salesforce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Salesforce integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cases
     
   </span>
   
@@ -511,27 +637,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#writing-the-update" class="md-nav__link">
+  <a href="#starting-the-wizard" class="md-nav__link">
     <span class="md-ellipsis">
-      Writing the update
+      Starting the wizard
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#marking-an-update-as-complete" class="md-nav__link">
+  <a href="#working-through-an-account" class="md-nav__link">
     <span class="md-ellipsis">
-      Marking an update as complete
+      Working through an account
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#meeting-agenda-integration" class="md-nav__link">
+  <a href="#using-ai-suggestions" class="md-nav__link">
     <span class="md-ellipsis">
-      Meeting agenda integration
+      Using AI suggestions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-and-moving-to-the-next-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving and moving to the next account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-one-indicator-outside-the-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing one indicator outside the wizard
     </span>
   </a>
   
@@ -541,6 +685,48 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../action-items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action items
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Requests
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -649,30 +835,69 @@
 
 
 <h1 id="monthly-cx-update">Monthly CX update<a class="headerlink" href="#monthly-cx-update" title="Permanent link">&para;</a></h1>
-<p>The Monthly CX Update is a structured summary of an account's state that you send
-to the customer or your internal team on a regular cadence. Upsight tracks when
-each account's update is due and surfaces it as a reminder.</p>
+<p>The Monthly CX Update is a guided wizard that walks you through refreshing an
+account's health picture for the month: ten health indicators, an overall
+sentiment score, a handful of renewal-related fields, and an executive summary
+entry. It is not a document you draft and copy, it is the flow that actually
+updates the account's posture in Salesforce.</p>
 <h2 id="how-the-due-date-works">How the due date works<a class="headerlink" href="#how-the-due-date-works" title="Permanent link">&para;</a></h2>
-<p>The reminder appears starting from a configured day of the month and stays visible
-until you mark the update as sent. You set the due day in Settings under General,
-"Monthly CX Update." The default is day 1.</p>
-<p>The app does not enforce a strict deadline. Setting the due day to 5, for example,
-means the reminder appears from the 5th onward for each account that does not have
-a completed update for the current month.</p>
-<h2 id="writing-the-update">Writing the update<a class="headerlink" href="#writing-the-update" title="Permanent link">&para;</a></h2>
-<p>The CX Update composer pulls in the account's current data, including health
-posture, recent meetings, open action items, opportunities, and usage data. You
-can edit the draft before copying or sending it.</p>
-<p>Copy the update as Markdown or Slack Markdown using the composer's format
-buttons.</p>
-<h2 id="marking-an-update-as-complete">Marking an update as complete<a class="headerlink" href="#marking-an-update-as-complete" title="Permanent link">&para;</a></h2>
-<p>Once you have sent the update, mark it as complete on the account's Overview tab.
-This clears the reminder for the current month. The record stays in the account
-history.</p>
-<h2 id="meeting-agenda-integration">Meeting agenda integration<a class="headerlink" href="#meeting-agenda-integration" title="Permanent link">&para;</a></h2>
-<p>The Monthly CX Update content feeds into the Agendas tab. The Agendas tab lets
-you build a meeting agenda from the update content, which you can copy and share
-before a sync meeting.</p>
+<p>Upsight tracks which accounts have a completed update for the current month and
+surfaces a reminder banner (top of the Dashboard, "Monthly CX Updates, N
+remaining") starting from a configured day of the month. Set the due day in
+Settings under General, "Monthly CX Update" (see <a href="../settings/">Settings</a>). The
+app does not enforce a strict deadline. It just keeps the banner, and each
+account's count toward it, visible until that account's update is submitted.</p>
+<h2 id="starting-the-wizard">Starting the wizard<a class="headerlink" href="#starting-the-wizard" title="Permanent link">&para;</a></h2>
+<p>Click <strong>Start</strong> on the Dashboard banner to walk every remaining account in turn.
+To update a single account instead, open it and use its Overview tab quick
+actions to launch the wizard scoped to just that account.</p>
+<h2 id="working-through-an-account">Working through an account<a class="headerlink" href="#working-through-an-account" title="Permanent link">&para;</a></h2>
+<p>For each account the wizard shows:</p>
+<ul>
+<li><strong>Ten health indicators</strong> (Consumption, Enterprise Features, Kong OSS Present,
+  Critical Use Cases, Customer Business Health, Relationship Health, Technical
+  Engagement, Platform Play, Value Realization, Active Project), each a
+  Red/Yellow/Green status plus a free-text comment.</li>
+<li><strong>Account Health Score</strong>, a sentiment status and comment, tracked separately
+  from the ten indicators.</li>
+<li><strong>CX Play, Notes for Support, Expected Production Date, Renewal Risk Level,
+  Customer Stage, and ARR Churn Forecast.</strong> Renewal Risk Level and ARR Churn
+  Forecast route to the account's next open renewal opportunity and only appear
+  when one exists.</li>
+<li><strong>Executive summary</strong>, a free-text entry that gets prepended (with your name
+  and the date) to the account's running exec-summary notes rather than
+  replacing them.</li>
+</ul>
+<p>Every field shows the account's current value alongside the one you are editing,
+so you can see exactly what would change.</p>
+<h2 id="using-ai-suggestions">Using AI suggestions<a class="headerlink" href="#using-ai-suggestions" title="Permanent link">&para;</a></h2>
+<p>Each indicator, the sentiment score, and the executive summary have their own
+<strong>Generate</strong> button that asks your configured AI binary for a suggested status
+and comment from the account's current data. A field generates independently of
+the others, so one slow or failed generation does not hold up the rest. Review
+every suggestion before accepting it. Nothing saves until you accept a field or
+type over it yourself.</p>
+<h2 id="saving-and-moving-to-the-next-account">Saving and moving to the next account<a class="headerlink" href="#saving-and-moving-to-the-next-account" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Submit &amp; next</strong> writes every changed field back to Salesforce, marks this
+  account's update complete for the month (clearing it from the reminder count),
+  and advances to the next account.</li>
+<li><strong>Skip account</strong> advances without saving anything for this account.</li>
+<li><strong>Save &amp; close</strong> saves whatever you have entered so far without marking the
+  month complete and without advancing, so you can pick the account back up
+  later from where you left off.</li>
+</ul>
+<p>A running count of changes sits in the footer; click it to review, and revert,
+any single pending edit before you submit.</p>
+<p>When you reach the last account, the wizard shows how many accounts were saved,
+skipped, or could not be saved (a genuine Salesforce load failure, distinct from
+a deliberate skip) before returning you to the Dashboard.</p>
+<h2 id="editing-one-indicator-outside-the-wizard">Editing one indicator outside the wizard<a class="headerlink" href="#editing-one-indicator-outside-the-wizard" title="Permanent link">&para;</a></h2>
+<p>You do not have to run the whole wizard to fix a single indicator. On an
+account's Health tab, click any indicator's status pill to open a small editor
+for just its status and notes. This has no AI suggestion and does not affect the
+monthly-complete tracking, it is a plain manual edit that saves locally and
+queues for Salesforce write-back the same way any other field edit does.</p>
 
 
 

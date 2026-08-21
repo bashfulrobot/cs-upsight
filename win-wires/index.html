@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://upsight.bashfulrobot.com/salesforce/">
+        <link rel="canonical" href="https://upsight.bashfulrobot.com/win-wires/">
       
       
-        <link rel="prev" href="../qna/">
+        <link rel="prev" href="../health-and-cx-events/">
       
       
-        <link rel="next" href="../cases/">
+        <link rel="next" href="../agendas/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Salesforce integration - Upsight</title>
+        <title>Win Wires - Upsight</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#salesforce-integration" class="md-skip">
+        <a href="#win-wires" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Salesforce integration
+              Win Wires
             
           </span>
         </div>
@@ -451,10 +451,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../win-wires/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Win Wires
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -464,6 +485,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generating-a-win-wire-from-a-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating a win wire from a PDF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entering-one-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entering one manually
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reviewing-and-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reviewing and editing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keeping-win-wires-in-sync-with-salesforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping win wires in sync with Salesforce
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -514,31 +591,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Salesforce integration
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../salesforce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,95 +604,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authentication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syncing-data-from-salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syncing data from Salesforce
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#salesforce-write-back-off-by-default" class="md-nav__link">
-    <span class="md-ellipsis">
-      Salesforce write-back (off by default)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-sf-cli-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      The sf CLI path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cases
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jira-and-slack-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Jira and Slack links
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#escalation-and-staleness-indicators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escalation and staleness indicators
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -849,66 +816,40 @@
   
 
 
-<h1 id="salesforce-integration">Salesforce integration<a class="headerlink" href="#salesforce-integration" title="Permanent link">&para;</a></h1>
-<p>Upsight reads from and writes to Salesforce through your locally installed <code>sf</code>
-CLI. The app never handles your Salesforce credentials directly.</p>
-<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>Log in once with the Salesforce CLI:</p>
-<div class="highlight"><pre><span></span><code>sf<span class="w"> </span>org<span class="w"> </span>login<span class="w"> </span>web
-</code></pre></div>
-<p>This opens a browser, authenticates against Kong's production Salesforce org, and
-stores the session in the CLI's own credential store. Upsight picks it up on the
-next sync.</p>
-<p>To check whether the app sees an authenticated session, go to Settings, then
-Integrations, then Salesforce. The status indicator shows your authenticated
-username or "Not authenticated."</p>
-<p>You can also start the login flow from Settings, which shows the command and
-the auth-status indicator.</p>
-<h2 id="syncing-data-from-salesforce">Syncing data from Salesforce<a class="headerlink" href="#syncing-data-from-salesforce" title="Permanent link">&para;</a></h2>
-<p>Upsight pulls Salesforce data on demand. Open an account and click the sync button
-in the account header (the rotating-arrows icon above the tab strip) to pull the
-latest data.</p>
-<p>Reads are read-only SELECT queries against the live Kong production org.</p>
-<h2 id="salesforce-write-back-off-by-default">Salesforce write-back (off by default)<a class="headerlink" href="#salesforce-write-back-off-by-default" title="Permanent link">&para;</a></h2>
-<p>Write-back is the path that pushes your local edits (posture fields, health
-indicators, notes) back to Salesforce. It is off by default, because turning it
-on writes to the live Kong org.</p>
-<p>With write-back off:</p>
-<ul>
-<li>Edits still save locally and appear in the UI immediately.</li>
-<li>Changes queue in the local database.</li>
-<li>Nothing leaves your machine.</li>
-</ul>
-<p>To enable write-back: go to Settings, Integrations, Salesforce, and turn on
-"Push field edits back to Salesforce", then relaunch the app.</p>
-<p>Once enabled, a field edit pushes after a short debounce. A background drain
-retries any failures automatically.</p>
-<p>Before enabling, check the Sync Log to review any queued edits from earlier
-sessions. Open it by clicking "Sync Log" at the bottom of the left sidebar. Those
-queued edits push on the first launch after you enable write-back.</p>
-<h2 id="the-sf-cli-path">The <code>sf</code> CLI path<a class="headerlink" href="#the-sf-cli-path" title="Permanent link">&para;</a></h2>
-<p>By default the app finds the <code>sf</code> CLI on your <code>PATH</code>. If you need to point it at
-a specific binary, set a custom path under Settings, Integrations, Salesforce.
-Toggle "Auto" off and enter the absolute path to the binary.</p>
-<h2 id="cases">Cases<a class="headerlink" href="#cases" title="Permanent link">&para;</a></h2>
-<p>Cases are pulled from Salesforce and displayed read-only. There is no case
-write-back; case management stays in Salesforce.</p>
-<h3 id="jira-and-slack-links">Jira and Slack links<a class="headerlink" href="#jira-and-slack-links" title="Permanent link">&para;</a></h3>
-<p>If a case has a linked Jira ticket or Slack thread in Salesforce, a matching
-button appears on the case and opens that URL in your default browser. Hover
-over the button first to see which host it points to.</p>
-<h3 id="escalation-and-staleness-indicators">Escalation and staleness indicators<a class="headerlink" href="#escalation-and-staleness-indicators" title="Permanent link">&para;</a></h3>
-<p>Two indicators surface on the Cases list and case detail pane, both computed
-locally from data already synced (nothing new to configure):</p>
-<ul>
-<li><strong>Escalated</strong> (red activity icon): the case's Status is one of "Escalated to
-  Eng," "Escalated to Services," or "Internal Escalation," or the case has a
-  Jira ticket linked. Closed and solved cases never show this, even if they were
-  escalated at some point, since the escalation is no longer active.</li>
-<li><strong>Stale</strong> (amber clock icon): the case is open and its most recent comment (or
-  its creation date, if it has never had a comment) is more than a week old.
-  Closed and solved cases never show this either.</li>
-</ul>
+<h1 id="win-wires">Win wires<a class="headerlink" href="#win-wires" title="Permanent link">&para;</a></h1>
+<p>The Win Wires tab, inside an account, holds closed-won write-ups: what was
+sold, the deal terms, and the competitive context. Upsight can generate one
+from a PDF, or you can enter one by hand.</p>
+<h2 id="generating-a-win-wire-from-a-pdf">Generating a win wire from a PDF<a class="headerlink" href="#generating-a-win-wire-from-a-pdf" title="Permanent link">&para;</a></h2>
+<p>Click <strong>Add</strong>, then <strong>Extract from PDF</strong> in the dialog that opens. This opens
+a native file picker to choose the PDF. Upsight extracts the PDF's text and
+sends it to your configured AI CLI, which returns a structured draft: the
+opportunity name, close date, ACV, TCV, term length, category, sales play,
+competitors, champion, owner, and required capabilities.</p>
+<p>This needs both <code>pdftotext</code> (poppler) and the AI CLI (<code>claude</code> by default) on
+<code>PATH</code>. See <a href="../install-macos/#runtime-dependencies">Install on macOS</a> for how
+to install them, or <code>upsight doctor</code> to check what is missing.</p>
+<p>The extracted draft is saved as soon as extraction finishes, review and edit
+any field, then click <strong>Add</strong> to keep it. Closing the dialog without saving
+discards the draft entirely, nothing is left behind.</p>
+<h2 id="entering-one-manually">Entering one manually<a class="headerlink" href="#entering-one-manually" title="Permanent link">&para;</a></h2>
+<p>Open the same <strong>Add</strong> dialog and fill in the fields yourself, skipping
+<strong>Extract from PDF</strong>. Every field the AI extraction fills in is also a plain
+editable field.</p>
+<h2 id="reviewing-and-editing">Reviewing and editing<a class="headerlink" href="#reviewing-and-editing" title="Permanent link">&para;</a></h2>
+<p>Click a win wire in the list to expand it. Use <strong>Open the source PDF</strong> to view
+the original file (only available for entries created from a PDF), or the
+edit button to change any field. Editing works the same whether the entry came
+from AI extraction or manual entry.</p>
+<h2 id="keeping-win-wires-in-sync-with-salesforce">Keeping win wires in sync with Salesforce<a class="headerlink" href="#keeping-win-wires-in-sync-with-salesforce" title="Permanent link">&para;</a></h2>
+<p>Salesforce can also supply win wire entries directly, and a win wire linked to
+a Salesforce Opportunity can be refreshed from there. In Settings, under Data
+Maintenance, <strong>Backfill Win Wires from Salesforce</strong> re-syncs every win wire
+against its linked Opportunity: it pulls the authoritative close date,
+ACV/TCV, opportunity name, owner, and stage, then renames the PDF to a
+canonical filename. This is safe to run any time, already-enriched rows are
+just refreshed, and the button reports how many were enriched, renamed,
+skipped, or failed.</p>
 
 
 
