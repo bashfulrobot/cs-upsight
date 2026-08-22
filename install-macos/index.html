@@ -414,6 +414,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the CLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#runtime-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       Runtime dependencies
@@ -884,6 +893,17 @@ it, so macOS Gatekeeper blocks a plain double-click on first launch with an
   This clears the quarantine attribute Gatekeeper checks. Use it if the
   right-click path does not offer an Open option.</li>
 </ul>
+<h2 id="using-the-cli">Using the CLI<a class="headerlink" href="#using-the-cli" title="Permanent link">&para;</a></h2>
+<p>The <code>.dmg</code> installs only the GUI app, so <code>upsight</code> isn't on your <code>PATH</code> yet — the
+GUI and the CLI are the same binary, just invoked differently. To run
+<code>upsight doctor</code>, <code>upsight summarize</code>, or any other CLI command from a
+terminal, symlink it once:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.local/bin
+ln<span class="w"> </span>-sf<span class="w"> </span>/Applications/Upsight.app/Contents/MacOS/upsight<span class="w"> </span>~/.local/bin/upsight
+</code></pre></div>
+<p>Make sure <code>~/.local/bin</code> is on your <code>PATH</code> (add <code>export PATH="$HOME/.local/bin:$PATH"</code>
+to your shell's rc file if it isn't already). Re-run the <code>ln -sf</code> command after
+installing a newer release so the symlink keeps pointing at real code.</p>
 <h2 id="runtime-dependencies">Runtime dependencies<a class="headerlink" href="#runtime-dependencies" title="Permanent link">&para;</a></h2>
 <p>The app itself needs nothing beyond the <code>.dmg</code>. A handful of features shell out
 to external CLIs and need those on <code>PATH</code> separately. Install only what you use,
