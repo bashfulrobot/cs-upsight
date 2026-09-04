@@ -936,11 +936,15 @@ on or off.</p>
 <p>You can switch between light and dark themes (or follow your system setting) and
 between comfortable and compact row density in Settings under General.</p>
 <h2 id="checking-your-setup">Checking your setup<a class="headerlink" href="#checking-your-setup" title="Permanent link">&para;</a></h2>
-<p>Run <code>upsight doctor</code> from a terminal to confirm your integrations are wired
-up correctly: Salesforce auth, Clari, the Google Calendar ICS feed, and the
-win-wire toolchain (<code>pdftotext</code> plus an AI CLI). Each line reports <strong>OK</strong>
-(configured and working), <strong>SKIP</strong> (not configured, not a problem), or
-<strong>FAIL</strong> (configured but not working, the only state that fails the command).</p>
+<p>Run <code>upsight doctor</code> from a terminal to confirm your integrations and runtime
+dependencies are wired up correctly: Salesforce auth, Clari, the Google
+Calendar ICS feed, the win-wire toolchain (<code>pdftotext</code> plus an AI CLI), PDF
+text extraction for account documents (also <code>pdftotext</code>), the clipboard tool,
+desktop notifications, the "open in Finder/Explorer" handler, and the <code>claude</code>
+CLI the Sync Log's "Investigate failure" action needs regardless of your
+configured AI provider. Each line reports <strong>OK</strong> (configured and working),
+<strong>SKIP</strong> (not configured, not a problem), or <strong>FAIL</strong> (configured but not
+working, the only state that fails the command).</p>
 <p>Add <code>--ai</code> to also run a real AI generation through your configured binary.
 It's opt-in because it spends a model call and can take up to 90 seconds, but
 it's the only check that catches an AI CLI too old for Upsight's flags, an
