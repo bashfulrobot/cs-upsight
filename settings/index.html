@@ -1015,6 +1015,17 @@ Slack touchpoints.</p>
 <p><strong>Salesforce.</strong> Shows the authentication status of your <code>sf</code> CLI session. Click
 "Log in to Salesforce" if not authenticated. You can also set a custom path to the
 <code>sf</code> binary if it is not on your <code>PATH</code>.</p>
+<p><strong>Snowflake usage.</strong> The Usage screen reads Konnect consumption through the
+<code>snowstorm</code> command-line tool. Under "snowstorm binary", Auto-detect looks for
+<code>snowstorm</code> on your <code>PATH</code>. An app launched from Finder or the Dock does not
+see <code>~/go/bin</code>, so auto-detect can miss a tool installed there; choose
+"Custom path..." and enter an absolute path such as <code>~/go/bin/snowstorm</code>, then
+click Apply. The line underneath shows which binary was found, or that it was
+not. "Connection" is optional: leave it empty to use the default connection from
+snowstorm's own <code>~/.snowstorm/config.toml</code>, or enter a connection name (letters,
+digits, <code>.</code>, <code>_</code> and <code>-</code>, up to 64 characters, not starting with <code>-</code>). The
+connection is shared by both of your machines; the binary path is saved per
+machine.</p>
 <p><strong>Todoist.</strong> Enter your Todoist API token to enable task sync. Find the token in
 Todoist under Settings, Integrations, Developer. After saving, use "Test" to
 verify the connection. Revoke and regenerate this token from Todoist Settings if
