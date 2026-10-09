@@ -1047,12 +1047,29 @@ to edit or delete it.</p>
 that org, so ownership is visible without leaving the tab. Click a mapped
 team's chip to unmap it.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>A read-only view of product adoption pulled from the account's synced Salesforce
-entitlement data: usage bars (used against contracted, colored red under 50%,
-yellow under 80%, green at 80%+) and value fields for Konnect, Cloud Gateway,
-Enterprise, Mesh, Insomnia, and production-date milestones. Nothing here is
-editable. It stays empty until entitlement data has been synced for the
-account.</p>
+<p>A read-only view of product adoption. Usage counts and volumes (Gateway Services, API
+requests, Dev Portals, Mesh Zones and the other Konnect metrics) come from Snowflake
+through the <strong>Refresh</strong> button. The remaining values (ACV, deployment stage, notes, Insomnia
+seats, Enterprise figures and production dates) come from the account's synced Salesforce
+entitlement data. Nothing here is editable. It stays empty until entitlement data has been
+synced for the account.</p>
+<p>Bars for counts in use are colored red when use is above the contracted amount, and otherwise
+red under 50%, yellow under 80% and green at 80%+. Volume bars (such as API requests) show
+how much of the contract has been used over its term and stay neutral.</p>
+<p>When the account has Snowflake usage data, a strip of headline numbers sits above the
+cards: Gateway Services against the contracted amount, API requests so far this month, how
+many metered products are over contract, and the date the data runs through. If the newest
+data is old, the strip names its month. Each metric row also shows a small 12-month sparkline:
+a line for counts in use (with a dashed line at the contracted amount when it did not change
+over the period), or bars for monthly volumes, with the current month hatched until it
+closes. A gap in the data is shown as a gap.</p>
+<p>A change chip next to each sparkline compares the latest figure with the previous month.
+For counts in use it reads like "+7 (+6%) vs Sep": the latest reading against September.
+For monthly volumes it compares the last two complete months, so it names both, like
+"+2.5M (+4%) Sep vs Aug", and the current, unfinished month is never compared. Growth is
+shown in neutral grey. A row is flagged amber for a drop of 20% or more, or for growth of
+25% or more against a contracted amount, and red with an "Over contract" badge when use is
+above what was contracted. Rows for Unlimited or unlicensed products have no sparkline.</p>
 <h2 id="documents">Documents<a class="headerlink" href="#documents" title="Permanent link">&para;</a></h2>
 <p>Attaches file metadata to the account, which also feeds the account's AI
 context (meeting summaries, Q&amp;A, and similar draw on document descriptions).</p>
