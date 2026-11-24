@@ -789,6 +789,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#granola-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Granola meetings
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1071,6 +1082,29 @@ in the list but look different from pending ones.</p>
 <h2 id="logging-activity">Logging activity<a class="headerlink" href="#logging-activity" title="Permanent link">&para;</a></h2>
 <p>From the meeting detail you can log a CX activity tied to the meeting. This creates
 an activity record linked to the meeting date and the relevant contact.</p>
+<h2 id="granola-meetings">Granola meetings<a class="headerlink" href="#granola-meetings" title="Permanent link">&para;</a></h2>
+<p>With a Granola API key saved in Settings, Upsight can pull the verbatim
+transcript from Granola and write the summary itself, instead of you exporting
+and pasting it.</p>
+<ul>
+<li><strong>Offer to import.</strong> On an account's Meetings tab, a banner lists Granola
+  meetings from the last 14 days that Upsight has no summary for. Click "Import &amp;
+  summarize" to pull the transcript and generate the summary. Upsight matches a
+  meeting to an account by attendee email domain, then by the account name in
+  the title. If two accounts could match, it suggests none.</li>
+<li><strong>No match.</strong> Meetings that matched no account are listed under "other Granola
+  meetings". Expand them and click "Import to this account" to choose.</li>
+<li><strong>New summary dialog.</strong> "Pull from Granola" fills the name, date and
+  transcript from a Granola meeting. Granola's own summary and your private notes
+  go in as context.</li>
+<li><strong>Notifications.</strong> Upsight checks Granola every 30 minutes and sends one
+  notification per matched meeting it has not imported.</li>
+<li><strong>Never twice.</strong> A meeting you have imported, or already summarized from a
+  file, is not offered again.</li>
+</ul>
+<p>A meeting that just ended can take a few minutes to appear in Granola's API. If
+your workspace admin turned off API transcripts, import fails with a permission
+error.</p>
 
 
 
